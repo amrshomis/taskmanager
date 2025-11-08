@@ -1,0 +1,8 @@
+<h2>إضافة مهمة جديدة</h2>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="title" placeholder="عنوان المهمة" required><br>
+    <textarea name="description" placeholder="الوصف"></textarea><br>
+    <button type="submit">حفظ</button>
+</form>
+<a href="{% url 'task_list' %}">عودة</a>
